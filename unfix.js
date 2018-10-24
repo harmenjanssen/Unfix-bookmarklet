@@ -15,7 +15,7 @@
   const clickListener = (e) => {
     const fixedTarget = findInDomAncestry(isFixed, e.target);
     if (fixedTarget) {
-      fixedTarget.style.position = 'static';
+      fixedTarget.style.position = 'static !important';
     }
     document.body.style.cursor = '';
     document.removeEventListener('click', clickListener);
