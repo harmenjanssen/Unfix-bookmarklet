@@ -17,9 +17,10 @@
     if (fixedTarget) {
       fixedTarget.style.setProperty('position', 'static', 'important');
     }
-    document.body.style.cursor = '';
+    e.preventDefault();
+    document.body.style.removeProperty('cursor');
     document.removeEventListener('click', clickListener);
   };
-  document.body.style.cursor = 'crosshair';
+  document.body.style.setProperty('cursor', 'crosshair', 'important');
   document.addEventListener('click', clickListener);
 })();
